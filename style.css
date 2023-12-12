@@ -1,0 +1,112 @@
+body {
+    background-color:black;
+}
+
+* {
+    font-family: "Josefin Sans";
+    animation: slideFromBottom 4s ease;
+    animation-fill-mode: backwards;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 10px;
+    padding: 0;
+}
+
+#profile_pic {
+    image-rendering: optimizeQuality;
+    width: 300px;
+    align-content: center;
+    transition: 1s;
+}
+
+#profile_pic:hover {
+    width: 350px;
+    transition: 1s;
+}
+
+#image-eight {
+    width: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+ul, li, a, h1{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    color:white;
+    padding: 10px;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: 1s;
+}
+
+p {
+    font-size: 2rem;
+    color:white;
+    text-decoration: none;
+    margin: 50px;
+}
+
+h1 {
+    padding-top: 30px;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: 1s;
+}
+
+#image {
+    image-rendering: optimizeQuality;
+    margin: auto;
+    align-content: center;
+    transition: 1s;
+    position: relative;
+}
+
+#image:hover{
+    transform: translateY(-20px);
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    position: absolute;
+  }
+  
+/* Clearfix (clear floats) */
+.image-row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+#image1:hover{
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@keyframes slideFromBottom  {
+    0% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
