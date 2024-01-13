@@ -1,5 +1,5 @@
-let x = windowWidth / 2; 
-let y = windowWidth / 2;
+let x = 0; 
+let y = 0;
 let bg = 0; 
 let ellipseColor = 140;
 let ellipseSize = 50;
