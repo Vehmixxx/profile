@@ -18,7 +18,7 @@ function draw() {
     fill(ellipseColor, 40);
     stroke(ellipseColor);
 
-    let ball = ellipse(x, y, ellipseSize, ellipseSize, );   
+    let ball = ellipse(x, y, ellipseSize, ellipseSize);   
 }
 
 function adjustCavnas() {
