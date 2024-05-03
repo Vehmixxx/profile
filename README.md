@@ -1,1 +1,3 @@
-just some html and css practice. uses images/pieces I have made, so don't steal them please. thank you and hope you like it :D
+a profile website, for my music alias ("veh_mix") and for my artwork.
+
+just html, javascript, and css practice. don't look please.
