@@ -12,7 +12,8 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
     <script src="cursor.js"></script>
-    <title>gallery.exe</title>
+    <script src="index.js"></script>
+    <title>Gallery</title>
   </head>
   <body onload="adjustCanvas()">
     <!--Navigation Bar-->
@@ -42,13 +43,24 @@
           id="image"
           class="column"
           src="Images/beginnings cover art for streaming ig.png"
+          onclick="resizeImage(this)"
         />
       </div>
       <div id="image-two">
-        <img id="image" class="column" src="Images/golden hour v1.png" />
+        <img
+          id="image"
+          class="column"
+          src="Images/golden hour v1.png"
+          onclick="resizeImage(this)"
+        />
       </div>
       <div id="image-three">
-        <img id="image" class="column" src="Images/fondness v3 (3).png" />
+        <img
+          id="image"
+          class="column"
+          src="Images/fondness v3 (3).png"
+          onclick="resizeImage(this)"
+        />
       </div>
       <div id="image-four">
         <img

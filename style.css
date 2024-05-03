@@ -1,6 +1,7 @@
 body {
   background-color: black;
   overflow-x: hidden;
+  white-space: nowrap;
 }
 
 * {
@@ -27,7 +28,7 @@ canvas {
 }
 
 #profile_pic:hover {
-  width: 350px;
+  transform: scale(1.05);
   transition: 1s;
 }
 
@@ -70,25 +71,26 @@ h1 {
 
 a:hover {
   text-decoration: none;
-  font-weight: bold;
   cursor: none;
-  font-size: 3rem;
+  transform: scale(1.2);
   transition: 1s;
 }
 
 #image {
-    animation: slideFromBottom2 5s ease;
+    animation: slideFromBottomForImages 5s ease;
     animation-fill-mode: backwards;
     image-rendering: optimizeQuality;
     margin: auto;
     align-content: center;
     transition: 1s;
-     position: relative;
+    position: relative;
+    opacity: 50%;
 }
 
 .nav_bar {
   position: sticky;
-  z-index: 1;
+  z-index: 2;
+  margin: -10;
   animation: slideFromBottom 4s ease-out;
   animation-fill-mode: backwards;
   opacity: 75%;
@@ -97,7 +99,13 @@ a:hover {
 }
 
 #image:hover {
-  transform: translateY(-20px);
+  transform: translateY(40px);
+  transform: scale(1.1);
+  justify-content: center;
+  align-content: center;
+  z-index: 1;
+  transition: 1s ease;
+  opacity: 100%;
 }
 
 .column {
@@ -125,6 +133,12 @@ a:hover {
   }
 }
 
+.about-text, .about-header {
+  animation: fadein 4s ease;
+  text-align: center;
+  justify-content: center;
+}
+
 @keyframes slideFromBottom {
   0% {
     transform: translateY(-500px);
@@ -134,7 +148,17 @@ a:hover {
   }
 }
 
-  @keyframes slideFromBottom2 {
+@keyframes fadein {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%
+  }
+}
+
+@keyframes slideFromBottomForImages {
     0% {
       transform: translateY(-3000px);
     }
