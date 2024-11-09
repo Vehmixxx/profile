@@ -24,3 +24,4 @@ closeBtn.addEventListener("click", function() {
     modal.style.opacity = "0";
     modal.style.display = "none";
 });
+

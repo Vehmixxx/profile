@@ -15,9 +15,7 @@ function draw() {
     x += (mouseX - x) * 0.10; 
     y += (mouseY - y) * 0.10; 
 
-    fill(ellipseColor, 40);
-    stroke(ellipseColor);
-
+    noStroke();
     let ball = ellipse(x, y, ellipseSize, ellipseSize);
 }
 

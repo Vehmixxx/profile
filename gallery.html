@@ -4,87 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
     </style>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
-    <script src="cursor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
     <title>veh_mix | Gallery</title>
   </head>
   <body onload="adjustCanvas()">
-    <!--Navigation Bar-->
+    <!--Background Image-->
     <div class="bg-image"></div>
+
+    <!--Navigation Bar-->
     <div class="nav_bar">
       <ul>
-        <li>
-          <a href="index.html" id="nav-bar-text">Home</a>
-        </li>
-        <li>
-          <a href="music.html" id="nav-bar-text">Music</a>
-        </li>
+        <li><a href="index.html" id="nav-bar-text">Home</a></li>
+        <li><a href="music.html" id="nav-bar-text">Music</a></li>
       </ul>
     </div>
-    <div class="image-row" class="center">
-      <div id="image">
-        <img
-          id="image-1"
-          class="column"
-          src="Images/beginnings cover art for streaming ig.png"
-        />
-      </div>
-      <div id="image">
-        <img id="image-2" class="column" src="Images/golden hour v1.png" />
-      </div>
-      <div id="image">
-        <img id="image-3" class="column" src="Images/fondness v3 (3).png" />
-      </div>
-      <div id="image">
-        <img
-          id="image-4"
-          class="column"
-          src="Images/change cover art final.png"
-        />
-      </div>
-      <div id="image">
-        <img
-          id="image-5"
-          class="column"
-          src="Images/meditation cover art.png"
-        />
-      </div>
-      <div id="image">
-        <img
-          id="image-6"
-          class="column"
-          src="Images/reasoning cover art concept.png"
-        />
-      </div>
-      <div id="image">
-        <img id="image-7" class="column" src="Images/cliff views.png" />
-      </div>
-      <div id="image">
-        <img id="image-8" class="column" src="Images/scenery project.png" />
-      </div>
-      <div id="image">
-        <img
-          id="image-9"
-          class="column"
-          src="Images/beginnings cover art tracklist (1).png"
-        />
-      </div>
-      <div id="image">
-        <img
-          id="image-10"
-          class="column"
-          src="Images/loflyier edit thing (small).jpeg"
-        />
-      </div>
-    </div>
-    <!-- modal pop up for images when you click on them -->
+
+    <!-- Modals for images -->
     <div id="modal-for-image" class="modal">
       <span id="close">&times;</span>
       <img class="modal-content" id="myImage" />
     </div>
+
+    <!--Scrolling Container - adds scrolling effect to images-->
+    <div data-scroll-container>
+      <section data-scroll data-scroll-speed="0.01">
+        <div class="image-row" class="center">
+          <div id="image">
+            <img
+              id="image-1"
+              class="column"
+              src="Images/beginnings cover art for streaming ig.png"
+            />
+          </div>
+
+          <div id="image">
+            <img id="image-2" class="column" src="Images/golden hour v1.png" />
+          </div>
+
+          <div id="image">
+            <img id="image-3" class="column" src="Images/fondness v3 (3).png" />
+          </div>
+
+          <div id="image">
+            <img
+              id="image-4"
+              class="column"
+              src="Images/change cover art final.png"
+            />
+          </div>
+
+          <div id="image">
+            <img
+              id="image-5"
+              class="column"
+              src="Images/meditation cover art.png"
+            />
+          </div>
+
+          <div id="image">
+            <img
+              id="image-6"
+              class="column"
+              src="Images/reasoning cover art concept.png"
+            />
+          </div>
+
+          <div id="image">
+            <img id="image-7" class="column" src="Images/cliff views.png" />
+          </div>
+
+          <div id="image">
+            <img id="image-8" class="column" src="Images/scenery project.png" />
+          </div>
+
+          <div id="image">
+            <img
+              id="image-9"
+              class="column"
+              src="Images/beginnings cover art tracklist (1).png"
+            />
+          </div>
+
+          <div id="image">
+            <img
+              id="image-10"
+              class="column"
+              src="Images/loflyier edit thing (small).jpeg"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Initialize Locomotive Scroll -->
+    <script src="scrolling.js"></script>
+    <script src="cursor.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

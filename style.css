@@ -11,6 +11,18 @@ body {
   background-color: rgba(0,0,0);
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  height: 100%;
+}
+
+/* Styling for the scroll container */
+[data-scroll-container] {
+  position: relative;
+}
+
 .bg-image {
   position: fixed;
   background-image: url("/Images/background-image@0.25x@0.75x.jpg");
@@ -19,7 +31,7 @@ body {
   background-size: cover;
   background-position: center;
   filter: blur(1px);
-  -webkit-filter: blur(0px);
+  -webkit-filter: blur(4px);
   height:100%;
   width:100%;
 }
@@ -29,19 +41,12 @@ body {
   justify-content: center;
   margin: 0px;
   padding: 0px;
-  /* cursor: none; */
-}
-
-html {
-  
 }
 
 canvas {
   position: absolute;
   pointer-events: none;
 }
-
-/* use alt for picture captions if u want to */
 
 /* have image popup using modal*/
 .modal {
