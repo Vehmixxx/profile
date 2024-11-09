@@ -1,16 +1,39 @@
+@font-face {
+  font-family: 'Adult Swim';
+  src: url('LiberationSans-Bold.ttf');
+}
+
 body {
-  background-color: black;
-  overflow-x: hidden;
-  white-space: nowrap;
+  margin: 0px;
+  height: 100%;
+  overflow-x:hidden;
+  scroll-behavior: auto;
+  background-color: rgba(0,0,0);
+}
+
+.bg-image {
+  position: fixed;
+  background-image: url("/Images/background-image@0.25x@0.75x.jpg");
+  opacity:15%;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  -webkit-filter: blur(0px);
+  height:100%;
+  width:100%;
 }
 
 * {
-  font-family: "Josefin Sans";
   box-sizing: border-box;
   justify-content: center;
-  margin: 10px;
-  padding: 0;
-  cursor: none;
+  margin: 0px;
+  padding: 0px;
+  /* cursor: none; */
+}
+
+html {
+  
 }
 
 canvas {
@@ -18,101 +41,151 @@ canvas {
   pointer-events: none;
 }
 
-#profile_pic {
-  animation: slideFromBottom 4s ease;
-  animation-fill-mode: backwards;
-  image-rendering: optimizeQuality;
-  width: 300px;
-  align-content: center;
-  transition: 1s;
+/* use alt for picture captions if u want to */
+
+/* have image popup using modal*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-#profile_pic:hover {
-  transform: scale(1.05);
+#close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 100px;
+  margin-right: 10px;
+  cursor: none;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+#close:hover {
+  color:grey;
+  transition: 0.3s ease;
+}
+
+.image-for-modal {
+  margin: 10px;
+  scale: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+#profile_pic {
+  z-index:20;
+  animation: slideFromBottom 3s ease;
+  animation-fill-mode: backwards;
+  image-rendering: optimizeQuality;
+  display: flex;
+  width: 300px;
+  margin-top: 100px;
+  justify-content: center;
   transition: 1s;
 }
 
 #image-eight {
-  width: 100%;
+  justify-content: flex-start;
+}
+
+canvas {
+  position: fixed !important;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: auto;
+  width: 100%;
 }
 
 ul,
 li,
-a,
-h1 {
+h1, p {
+  font-family: 'Adult Swim';
   list-style-type: none;
-  display: flex;
-  justify-content: center;
   color: white;
   padding: 10px;
-  font-size: 2rem;
+  font-size: 3rem;
   text-decoration: none;
   transition: 1s;
   cursor: none;
+  
 }
 
-p {
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#name {
+  font-size: 10rem;
+  margin-top:10%;
+  transition: 1s ease;
+  animation: fadein 2s ease;
+}
+
+.about-container {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-text {
+  width:75%;
+  word-wrap: normal;
+  font-size:2rem;
+  animation: fadein 6s ease;
+}
+
+a, li {
+  color:white;
   font-size: 2rem;
-  color: white;
-  text-decoration: none;
-  margin: 50px;
-}
-
-h1 {
-  padding-top: 30px;
+  margin:0px;
+  padding: 0px;
+  text-decoration: underline 0.2rem rgb(255, 255, 255, 0);
+  transition: 600ms;
 }
 
 a:hover {
-  text-decoration: none;
-  cursor: none;
-  transform: scale(1.2);
-  transition: 1s;
+  text-decoration: underline 0.2rem rgb(255, 255, 255, 1);
+  cursor:default;
 }
 
-#image {
+#image-1, #image-2, #image-3, #image-4, #image-5, #image-6, #image-7, #image-8, #image-9, #image-10 {
     animation: slideFromBottomForImages 5s ease;
+    transform: scale(1.0);
+    transition: 1s;
     animation-fill-mode: backwards;
     image-rendering: optimizeQuality;
     margin: auto;
     align-content: center;
-    transition: 1s;
     position: relative;
     opacity: 50%;
 }
 
-.nav_bar {
-  position: sticky;
-  z-index: 2;
-  margin: -10;
-  animation: slideFromBottom 4s ease-out;
-  animation-fill-mode: backwards;
-  opacity: 75%;
-  top: 0;
-  background-color: black;
-}
-
-#image:hover {
+/*this looks so scuffed I know but I don't care at this point, it works */
+#image-1:hover, #image-2:hover, #image-3:hover, #image-4:hover, #image-5:hover, #image-6:hover, #image-7:hover, #image-8:hover,#image-9:hover, #image-10:hover {
   transform: translateY(40px);
-  transform: scale(1.1);
+  transform: scale(1.05);
   justify-content: center;
   align-content: center;
   z-index: 1;
-  transition: 1s ease;
+  transition: 1s ease-in-out;
   opacity: 100%;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  position: absolute;
 }
 
 /* Clearfix (clear floats) */
@@ -122,23 +195,85 @@ a:hover {
   display: block;
 }
 
-#image1:hover {
-  transform: translateY(-15px);
-  cursor: pointer;
+#image-eight {
+  size:50%;
+}
+
+.nav_bar {
+  position: sticky;
+  z-index: 2;
+  margin: 0px;
+  animation: slideFromBottom 4.1s ease-out;
+  animation-fill-mode: backwards;
+  opacity: 75%;
+  top: 0;
+  background-color: rgba(0,0,0,.75);
+}
+
+#nav-bar-text { 
+  justify-content: left;
+}
+
+.column {
+  float: right;
+  width: 33.33%;
+  padding: 20px;
+  position: center;
 }
 
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
+  .nav_bar {
+    width:100%;
+  }
 }
 
-.about-text, .about-header {
-  animation: fadein 4s ease;
-  text-align: center;
-  justify-content: center;
+@media screen and (max-width: 700px) { 
+  a {
+    font-size: medium;
+  }
+  .nav_bar {
+    width:100%;
+  }
+
+  #about-text {
+    width:650px;
+    font-size:medium;
+  }
 }
 
+@media screen and (max-width: 475px) { 
+  a {
+    font-size: large;
+  }
+  
+  .nav_bar {
+    width:100%;
+  }
+
+  #about-text {
+    width:400px;
+    font-size:medium;
+  }
+
+  #name {
+    font-size:50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    width: 50%;
+  
+  }
+  li {
+    text-size-adjust: 100%;
+  }
+}
+
+/* animations */
 @keyframes slideFromBottom {
   0% {
     transform: translateY(-500px);
@@ -155,6 +290,25 @@ a:hover {
 
   100% {
     opacity: 100%
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 900px;
   }
 }
 

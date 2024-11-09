@@ -4,101 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&family=Quicksand:wght@300;400;500&family=Rubik+Bubbles&display=swap"
-      rel="stylesheet"
-    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
     <script src="cursor.js"></script>
-    <script src="index.js"></script>
-    <title>Gallery</title>
+    <title>veh_mix | Gallery</title>
   </head>
   <body onload="adjustCanvas()">
     <!--Navigation Bar-->
+    <div class="bg-image"></div>
     <div class="nav_bar">
       <ul>
         <li>
-          <!-- home page -->
-          <a href="index.html">Home</a>
+          <a href="index.html" id="nav-bar-text">Home</a>
         </li>
         <li>
-          <!-- about page of the site, will work on soon -->
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <!-- the music part of the site, will work on soon -->
-          <a href="music.html">Music</a>
-        </li>
-        <li>
-          <!-- gallery of art images  -->
-          <a href="gallery.html">Gallery</a>
+          <a href="music.html" id="nav-bar-text">Music</a>
         </li>
       </ul>
     </div>
     <div class="image-row" class="center">
-      <div id="image-one">
+      <div id="image">
         <img
-          id="image"
+          id="image-1"
           class="column"
           src="Images/beginnings cover art for streaming ig.png"
-          onclick="resizeImage(this)"
         />
       </div>
-      <div id="image-two">
-        <img
-          id="image"
-          class="column"
-          src="Images/golden hour v1.png"
-          onclick="resizeImage(this)"
-        />
+      <div id="image">
+        <img id="image-2" class="column" src="Images/golden hour v1.png" />
       </div>
-      <div id="image-three">
-        <img
-          id="image"
-          class="column"
-          src="Images/fondness v3 (3).png"
-          onclick="resizeImage(this)"
-        />
+      <div id="image">
+        <img id="image-3" class="column" src="Images/fondness v3 (3).png" />
       </div>
-      <div id="image-four">
+      <div id="image">
         <img
-          id="image"
+          id="image-4"
           class="column"
           src="Images/change cover art final.png"
         />
       </div>
-      <div id="image-five">
-        <img id="image" class="column" src="Images/meditation cover art.png" />
-      </div>
-      <div id="image-six">
+      <div id="image">
         <img
-          id="image"
+          id="image-5"
+          class="column"
+          src="Images/meditation cover art.png"
+        />
+      </div>
+      <div id="image">
+        <img
+          id="image-6"
           class="column"
           src="Images/reasoning cover art concept.png"
         />
       </div>
-      <div id="image-seven">
-        <img id="image" class="column" src="Images/cliff views.png" />
+      <div id="image">
+        <img id="image-7" class="column" src="Images/cliff views.png" />
       </div>
-      <div id="image-eight">
-        <img id="image" class="column" src="Images/scenery project.png" />
+      <div id="image">
+        <img id="image-8" class="column" src="Images/scenery project.png" />
       </div>
-      <div id="image-nine">
+      <div id="image">
         <img
-          id="image"
+          id="image-9"
           class="column"
           src="Images/beginnings cover art tracklist (1).png"
         />
       </div>
-      <div id="image-ten">
+      <div id="image">
         <img
-          id="image"
+          id="image-10"
           class="column"
           src="Images/loflyier edit thing (small).jpeg"
         />
       </div>
     </div>
+    <!-- modal pop up for images when you click on them -->
+    <div id="modal-for-image" class="modal">
+      <span id="close">&times;</span>
+      <img class="modal-content" id="myImage" />
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

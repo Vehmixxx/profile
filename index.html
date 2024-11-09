@@ -4,35 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&family=Quicksand:wght@300;400;500&family=Rubik+Bubbles&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
     <script src="cursor.js"></script>
     <script src="index.js"></script>
-    <title>veh_mix</title>
+    <title>veh_mix | Home</title>
   </head>
-  <body style="overflow: hidden;">
+  <body onload="adjustCanvas()">
     <!--Navigation Bar-->
+    <div class="bg-image"></div>
     <div class="nav_bar">
-      <ul>
+      <ul id="nav-text-area">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" id="nav-bar-text">Home</a>
         </li>
-        <!-- <li>
-          <a href="about.html">About</a>
-        </li> -->
-        <!-- <li>
-          <a href="music.html">Music</a>
-        </li> -->
         <li>
-           <!-- gallery of art images  -->
-            <a href="gallery.html">Gallery</a>
-          </li>
+          <a href="music.html" id="nav-bar-text">Music</a>
+        </li>
+        <li>
+          <!-- gallery of art images  -->
+          <a href="gallery.html" id="nav-bar-text">Gallery</a>
+        </li>
       </ul>
     </div>
-    <div id="profile-image" class="picture-area"> 
-        <img id = "profile_pic" class="center" src="Images/profile_pic_ace.jpg"> </img>
+    <div class="name-container">
+      <p id="name">[veh_mix]</p>
+    </div>
+    <div class="about-container">
+      <p id="about-text">
+        Hello, welcome to my page! I'm veh_mix (or Vince for short). I'm based
+        in Michigan and I'm a music producer/beatmaker that creates sample-based
+        chill instrumentals under the lofi hip hop style. I also do graphic
+        designs that are shown in the gallery. I'm very passionate towards
+        technology, computers, designing, and programming and currently trying
+        to improve my skills (even though this is a pretty simple site).
+      </p>
     </div>
     <script src="cursor.js"></script>
   </body>

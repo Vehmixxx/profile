@@ -1,19 +1,20 @@
-let x = -15; 
-let y = -15;
+var x = -15; 
+var y = -15;
 let bg = 0; 
 let ellipseColor = 150;
 let ellipseSize = 30;
 
 function setup() {
-    let canvas = createCanvas(3 * windowWidth, 3 * windowHeight);
+    let canvas = createCanvas(windowWidth+100, windowHeight+100);
     canvas.position(-15, -15);
-    canvas.style("z-index", 3);
+    canvas.style("z-index", 11);
 }
 
 function draw() {
     clear(); 
-    x += (mouseX - x) * 0.30; 
-    y += (mouseY - y) * 0.30; 
+    x += (mouseX - x) * 0.10; 
+    y += (mouseY - y) * 0.10; 
+
     fill(ellipseColor, 40);
     stroke(ellipseColor);
 
@@ -23,4 +24,3 @@ function draw() {
 function adjustCavnas() {
     resizeCanvas(windowWidth, windowHeight);
 }
-

@@ -1,0 +1,51 @@
+.text-container {
+    color:white;
+    text-wrap: balance;
+    margin-top: auto;
+    display: flex;
+    margin: 50px;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        overflow: visible;
+    }
+}
+
+span {
+    font-size: 30px;
+    color: white;
+    padding-left: 30px;
+    animation: slideFromRight 4s ease;
+}
+
+.about-header {
+    font-size: 4rem;
+    animation: slideFromRight 3s ease;
+}
+
+#about-image {
+    margin-left: auto;
+    width: 400px;
+    height: 400px;
+    animation: slideFromLeft 5s ease;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform:translateX(-2000px) 
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform:translateX(2000px) 
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
