@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- stupid vercel analytic stuff for this site lmfao -->
     <script src="js\cursor.js"></script>
     <script src="index.js"></script>
     <title>veh_mix | Home</title>
@@ -40,5 +49,12 @@
       </p>
     </div>
     <script src="cursor.js"></script>
+    <script>
+      function trackCustomEvent() {
+        va("event", {
+          name: "CustomAction",
+        });
+      }
+    </script>
   </body>
 </html>
