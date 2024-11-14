@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <!-- stupid vercel analytic stuff for this site -->
     <script>
       window.va =
         window.va ||
@@ -13,7 +14,16 @@
         };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <!-- stupid vercel analytic stuff for this site -->
+    <!-- tracks speed insights for vercel -->
+    <script>
+      window.si =
+        window.si ||
+        function () {
+          (window.siq = window.siq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
     <script src="js\cursor.js"></script>
     <script src="index.js"></script>
     <title>veh_mix | Home</title>
