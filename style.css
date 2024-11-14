@@ -124,8 +124,7 @@ h1, p {
 
 #name {
   font-size: 10rem;
-  margin-top:10%;
-  transition: 1s ease;
+  margin-top: 10%;
   animation: fadein 2s ease;
 }
 
