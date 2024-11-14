@@ -158,7 +158,6 @@ a:hover {
 }
 
 #image-1, #image-2, #image-3, #image-4, #image-5, #image-6, #image-7, #image-8, #image-9, #image-10 {
-    animation: slideFromBottomForImages 5s ease-out;
     transform: scale(1.0);
     transition: 1s;
     animation-fill-mode: backwards;
@@ -302,13 +301,4 @@ a:hover {
   100% {
     width: 900px;
   }
-}
-
-@keyframes slideFromBottomForImages {
-    0% {
-      opacity:0%;
-    }
-    100% {
-      opacity:50%;
-    }
 }
