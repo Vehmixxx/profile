@@ -195,7 +195,7 @@ a:hover {
   position: sticky;
   z-index: 2;
   margin: 0px;
-  animation: slideFromBottom 4.1s ease-out;
+  animation: slideFromBottom 3s ease-out;
   animation-fill-mode: backwards;
   opacity: 75%;
   top: 0;
@@ -306,9 +306,9 @@ a:hover {
 
 @keyframes slideFromBottomForImages {
     0% {
-      transform: translateY(-3000px);
+      opacity:0%;
     }
     100% {
-      transform: translateY(0px);
+      opacity:50%;
     }
 }
