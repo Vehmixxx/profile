@@ -1,19 +1,8 @@
-{ 
+{
     "rewrites": [
-        {
-            "source": "/:music.html",
-            "destination": "/:music/"
-        },
-        {
-            "source": "/:gallery.html",
-            "destination": "/:gallery/"
-
-        },
-        {
-            "source": "/:index.html",
-            "destination": "/:home/"
-
-        }
-
+      {
+        "source": "/:path.html",
+        "destination": "/:path"
+      }
     ]
-}
+  }
