@@ -178,7 +178,6 @@ a:hover {
   opacity: 100%;
 }
 
-/* Clearfix (clear floats) */
 .image-row::after {
   content: "";
   clear: both;
@@ -209,6 +208,68 @@ a:hover {
   width: 33.33%;
   padding: 20px;
   position: center;
+}
+
+/** This stuff relates to posts in the music tab only. 
+post columns, post title, post date, and post description, each postwill be clickable 
+and pop up a modal with the specific release links and description.**/
+
+.posts {
+  overflow:visible;
+}
+
+.post {
+  display: flex;
+  padding: 30px;
+}
+
+#post-image-right {
+  transform: scale(1.0);
+  width:100%;
+  padding: 30px;
+}
+
+#post-image-left {
+  transform: scale(1.0);
+  width:100%;
+  padding: 30px;
+}
+
+.post-text {
+  padding:30px;
+  display:inline-block;
+}
+
+#post-title {
+  font-size: 60px;
+}
+
+#post-date {
+  font-size: small;
+  font-style:italic;
+}
+
+#post-desc {
+  font-size: large;
+}
+
+#post-desc {
+  overflow:visible;
+}
+
+.post-row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#post-image:hover {
+  transform: scale(1.1);
+  transition: 1s ease-in-out;
+}
+
+#post-image:after {
+  transform: scale(1.0);
 }
 
 @media screen and (max-width: 600px) {

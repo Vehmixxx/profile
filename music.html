@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <script src="cursor.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>veh_mix | Music</title>
+  </head>
+  <body onload="adjustCanvas()">
+
+    <!--Navigation Bar-->
+    <div class="bg-image"></div>
+    <div class="nav_bar">
+      <ul id="nav-text-area">
+        <li>
+          <a href="/" id="nav-bar-text">Home</a>
+        </li>
+        <li>
+          <!-- gallery of art images  -->
+          <a href="/gallery.html" id="nav-bar-text">Gallery</a>
+        </li>
+      </ul>
+    </div>
+
+    <div data-scroll-container>
+      <section data-scroll data-scroll-speed="0.01">
+
+        <div class="posts">
+          <!-- Post layout basically. --> 
+          <div class="post" id="post1">
+            <div class="post-image">
+            <img
+                id="post-image-right"
+                src="Images/beginnings cover art for streaming ig.png"
+              />  
+              </div>
+            <div class="post-text">
+              <p id="post-title">compliment. [a samurai champloo tape]</p>
+              <p id="post-date">October 25, 2024</p>
+              <p id="post-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti!</p>
+            </div>
+          </div>
+          
+          <div class="post" id="post1">
+            <div class="post-image">
+            <img
+                id="post-image-left"
+                src="Images/scenery project.png"
+              />  
+              </div>
+            <div class="post-text">
+              <p id="post-title">oak picnic.</p>
+              <p id="post-date">July 26, 2024</p>
+              <p id="post-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti!</p>
+            </div>
+          </div>
+
+          <div class="post" id="post1">
+            <div class="post-image">
+            <img
+                id="post-image-right"
+                src="Images/fondness v3 (3).png"
+              />  
+              </div>
+            <div class="post-text">
+              <p id="post-title">fondness.</p>
+              <p id="post-date">August 18th, 2023</p>
+              <p id="post-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti!</p>
+            </div>
+          </div>
+
+          <div class="post" id="post1">
+            <div class="post-image">
+            <img
+                id="post-image-left"
+                src="Images/beginnings cover art for streaming ig.png"
+              />  
+              </div>
+            <div class="post-text">
+              <p id="post-title">or_g_n.</p>
+              <p id="post-date">November 3rd, 2022</p>
+              <p id="post-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Initialize Locomotive Scroll -->
+    <script src="index.js"></script>
+    <script>
+      function trackCustomEvent() {
+        va("event", {
+          name: "CustomAction",
+        });
+      }
+    </script>
+    <script src="scrolling.js"></script>
+</html>
