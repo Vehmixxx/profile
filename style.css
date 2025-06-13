@@ -3,6 +3,31 @@
   src: url('LiberationSans-Bold.ttf');
 }
 
+/* CSS Custom Properties for better maintainability */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #cccccc;
+  --accent-color: #666666;
+  --background-color: #000000;
+  --nav-background: rgba(0, 0, 0, 0.75);
+  --modal-background: rgba(0, 0, 0, 0.8);
+  --font-family: 'Adult Swim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.6s ease;
+  --transition-slow: 1s ease;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0px;
   height: 100%;
@@ -48,7 +73,7 @@ canvas {
   pointer-events: none;
 }
 
-/* have image popup using modal*/
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -88,10 +113,6 @@ canvas {
   justify-content: center;
 }
 
-#image-eight {
-  justify-content: flex-start;
-}
-
 canvas {
   position: fixed !important;
 }
@@ -103,6 +124,7 @@ canvas {
   width: 100%;
 }
 
+/*Title Page*/
 ul,
 li,
 h1, p {
@@ -136,9 +158,8 @@ h1, p {
 }
 
 #about-text {
-  width:75%;
   word-wrap: normal;
-  font-size:2rem;
+  font-size: 1.6rem;
   animation: fadein 6s ease;
 }
 
@@ -156,6 +177,14 @@ a:hover {
   cursor:default;
 }
 
+/* Gallery  */
+.column {
+  float: right;
+  width: 33.33%;
+  padding: 20px;
+  position: center;
+}
+
 #image-1, #image-2, #image-3, #image-4, #image-5, #image-6, #image-7, #image-8, #image-9, #image-10 {
     transform: scale(1.0);
     transition: 1s;
@@ -164,10 +193,11 @@ a:hover {
     margin: auto;
     align-content: center;
     position: relative;
-    opacity: 50%;
+    animation: fadein 1s ease;
 }
 
-/*this looks so scuffed I know but I don't care at this point, it works */
+
+
 #image-1:hover, #image-2:hover, #image-3:hover, #image-4:hover, #image-5:hover, #image-6:hover, #image-7:hover, #image-8:hover,#image-9:hover, #image-10:hover {
   transform: translateY(40px);
   transform: scale(1.05);
@@ -185,9 +215,11 @@ a:hover {
 }
 
 #image-eight {
+  justify-content: flex-start;
   size:50%;
 }
 
+/* Navigation bar */
 .nav_bar {
   position: sticky;
   z-index: 2;
@@ -201,13 +233,6 @@ a:hover {
 
 #nav-bar-text { 
   justify-content: left;
-}
-
-.column {
-  float: right;
-  width: 33.33%;
-  padding: 20px;
-  position: center;
 }
 
 /** This stuff relates to posts in the music tab only. 
@@ -231,7 +256,7 @@ and pop up a modal with the specific release links and description.**/
 
 #post-image-left {
   transform: scale(1.0);
-  width:100%;
+  width: 100%;
   padding: 30px;
 }
 
@@ -246,7 +271,7 @@ and pop up a modal with the specific release links and description.**/
 
 #post-date {
   font-size: small;
-  font-style:italic;
+  font-style: italic;
 }
 
 #post-desc {
@@ -272,6 +297,34 @@ and pop up a modal with the specific release links and description.**/
   transform: scale(1.0);
 }
 
+#post-buttons {
+  display: flexbox; 
+  flex-direction: row; 
+  gap: 10px; 
+  margin-top: 30px; 
+  justify-content: flex-start; 
+  overflow: visible;
+  position:relative;
+}
+
+#link-button {
+    padding: 10px 20px;
+    font-size: 15px; /* Adjust font size */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
+    border: 2px solid white;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    width:100%;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+#link-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -291,7 +344,7 @@ and pop up a modal with the specific release links and description.**/
 
   #about-text {
     width:650px;
-    font-size:medium;
+    font-size: 3rem;
   }
 }
 
@@ -328,19 +381,23 @@ and pop up a modal with the specific release links and description.**/
 @keyframes slideFromBottom {
   0% {
     transform: translateY(-500px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0px);
+    opacity: 1;
   }
 }
 
 @keyframes fadein {
   0% {
     opacity: 0%;
+    transform: translateY(30px);
   }
 
   100% {
-    opacity: 100%
+    opacity: 100%;
+    transform: translateY(0);
   }
 }
 
@@ -362,3 +419,36 @@ and pop up a modal with the specific release links and description.**/
     width: 900px;
   }
 }
+
+/* Larger screens */
+@media screen and (min-width: 1200px) {
+  .name-container,
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus Styles for Accessibility */
+*:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+

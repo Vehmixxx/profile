@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 
+ul,
+li,
+h1,
+p {
+  font-family: "Adult Swim";
+  list-style-type: none;
+  color: white;
+  padding: 10px;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: 1s;
+} */
+
+a,
+li {
+  color: white;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: underline 0.2rem rgb(255, 255, 255, 0);
+  transition: 600ms;
+}
+
+/* Improved Posts Styling */
+.posts {
+  overflow: visible;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadein 2s ease;
+}
+
+/* Image positioning */
+.post-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.post-image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.post-image:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+/* Text content */
+.post-text {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#post-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#post-date {
+  font-size: 1rem;
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 1px;
+}
+
+#post-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+/* Button styling */
+.post-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.post-buttons a {
+  text-decoration: none;
+}
+
+#link-button {
+  padding: 12px 24px;
+  font-size: 0.5rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Adult Swim";
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 140px;
+  justify-content: center;
+}
+
+#link-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Alternating layout */
+.post:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.post:nth-child(even) .post-text {
+  text-align: right;
+}
+
+.post:nth-child(even) .post-buttons {
+  justify-content: flex-end;
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="adult-swim-webfont">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Fonts/adult-swim-webfont.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

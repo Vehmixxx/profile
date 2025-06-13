@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script>
@@ -20,6 +21,7 @@
     <script defer src="/_vercel/speed-insights/script.js"></script>
     <script src="cursor.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="music.css" />
     <title>veh_mix | Music</title>
   </head>
   <body onload="adjustCanvas()">
@@ -51,9 +53,20 @@
               />  
               </div>
             <div class="post-text">
-              <p id="post-title">compliment. [a samurai champloo tape]</p>
+              <h1 id="post-title">compliment. [a samurai champloo tape]</h1>
               <p id="post-date">October 25, 2024</p>
               <p id="post-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti!</p>
+            </div>
+            <div class="post-buttons">
+                <a href="https://youtu.be/WrXR3sp-gwM?si=Ext_-UX0WWS-MX5Q">
+                <button id="link-button" style="font-size:24px">YouTube <i class="fa fa-youtube-play"></i></button>
+              </a>
+              <a href="https://vehmix.bandcamp.com/album/compliment-a-samurai-champloo-tribute-tape">
+                <button id="link-button" style="font-size:24px">Bandcamp <i class="fa fa-bandcamp"></i></button>
+              </a>
+              <a href="https://soundcloud.com/vehmu/compliment-a-samurai-champloo-tape">
+                <button id="link-button" style="font-size:24px">SoundCloud<i class="fa fa-soundcloud"></i></button>
+              </a>
             </div>
           </div>
           
@@ -69,6 +82,7 @@
               <p id="post-date">July 26, 2024</p>
               <p id="post-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste praesentium laudantium voluptates corporis numquam odio vel earum blanditiis, illo dolorum rerum aspernatur ullam doloremque recusandae, tempore laborum, quo deleniti!</p>
             </div>
+
           </div>
 
           <div class="post" id="post1">
@@ -102,6 +116,21 @@
       </section>
     </div>
 
+    <!--button styling-->
+    <style>
+      .post-buttons {
+        display:flexbox;
+        padding: 10px;
+      }
+      .button-text {
+        font-size: 50px;
+
+      }
+      .button {
+        background-color: rgba(10, 10, 10, 1);
+      }
+    </style>
+
     <!-- Initialize Locomotive Scroll -->
     <script src="index.js"></script>
     <script>
@@ -112,4 +141,5 @@
       }
     </script>
     <script src="scrolling.js"></script>
+    </body>
 </html>
